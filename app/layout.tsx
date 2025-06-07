@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   keywords: ['children stories', 'bedtime stories', 'kids books', 'bear stories', 'educational stories'],
   authors: [{ name: 'Goo Goo Bear' }],
   colorScheme: 'light',
+  other: {
+    'pinterest-rich-pin': 'true',
+    'og:image:width': '350',
+    'og:image:height': '400',
+    'og:type': 'article',
+    'og:rich_attachment': 'true',
+    'pinterest': 'true'
+  },
   openGraph: {
     title: 'Goo Goo Bear - Enchanting Children\'s Stories',
     description: 'Join our lovable bear friend on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
@@ -23,7 +31,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en_US',
-    type: 'website',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
