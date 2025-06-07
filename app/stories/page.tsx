@@ -1,19 +1,19 @@
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
+import Link from "next/link"
 
 const stories = [
   {
     slug: "honey-adventure",
     title: "The Great Honey Adventure",
-    description: "Googoobear discovers a magical beehive and learns about friendship with the busy bees.",
+    description: "Goo Goo discovers a magical beehive and learns about friendship with the busy bees.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
     slug: "forest-friends",
     title: "New Friends in the Forest",
-    description: "When Googoobear gets lost, woodland creatures help him find his way home.",
+    description: "When Goo Goo gets lost, woodland creatures help him find his way home.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
@@ -25,13 +25,13 @@ const stories = [
   {
     slug: "winter-wonder",
     title: "Winter Wonderland",
-    description: "Googoobear's first snow day brings magical discoveries and cozy moments.",
+    description: "Goo Goo's first snow day brings magical discoveries and cozy moments.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
     slug: "birthday-party",
     title: "The Best Birthday Party",
-    description: "Googoobear learns that the best gifts come from the heart.",
+    description: "Goo Goo learns that the best gifts come from the heart.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
@@ -50,7 +50,7 @@ export default function StoriesPage() {
         <header className="text-center mb-12">
           <Link href="/" className="inline-block mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-purple-800 font-serif hover:text-purple-600 transition-colors">
-              Googoobear Stories
+              Goo Goo Stories
             </h1>
           </Link>
           <p className="text-xl text-purple-700 max-w-2xl mx-auto">

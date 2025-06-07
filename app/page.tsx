@@ -1,6 +1,6 @@
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
@@ -8,7 +8,7 @@ export default function HomePage() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-4 font-serif">Googoobear</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-amber-800 mb-4 font-serif">Goo Goo Bear</h1>
           <div className="w-24 h-1 bg-amber-600 mx-auto rounded-full"></div>
         </header>
 
@@ -18,7 +18,7 @@ export default function HomePage() {
             {/* Left Column - Text */}
             <div className="space-y-6">
               <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-amber-200">
-                <h2 className="text-3xl font-bold text-amber-900 mb-6 font-serif">Welcome to Googoobear's World! 🐻</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6 font-serif">Welcome to Goo Goo's World! 🐻</h2>
 
                 <p className="text-lg text-amber-800 leading-relaxed mb-6">
                   Join our lovable bear friend on gentle adventures through enchanted forests, cozy meadows, and magical
@@ -47,7 +47,7 @@ export default function HomePage() {
                 <div className="bg-white rounded-3xl p-6 shadow-xl border-4 border-amber-300 transform rotate-2">
                   <Image
                     src="/placeholder.svg?height=400&width=350"
-                    alt="Googoobear - A friendly brown bear with a warm smile, sitting in a meadow surrounded by colorful flowers"
+                    alt="Goo Goo - A friendly brown bear with a warm smile, sitting in a meadow surrounded by colorful flowers"
                     width={350}
                     height={400}
                     className="rounded-2xl"

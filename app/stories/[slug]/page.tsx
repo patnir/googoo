@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react"
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
 
 // Sample story data - in a real app, this would come from a database or CMS
 const storyData: Record<string, any> = {
@@ -15,25 +15,25 @@ const storyData: Record<string, any> = {
       {
         title: "Chapter 1: The Sweet Discovery",
         content:
-          "One sunny morning, Googoobear was wandering through the meadow when he caught the most wonderful smell. It was sweet and golden, floating on the warm breeze like a magical invitation.",
+          "One sunny morning, Goo Goo was wandering through the meadow when he caught the most wonderful smell. It was sweet and golden, floating on the warm breeze like a magical invitation.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 2: Meeting the Bees",
         content:
-          "Following his nose, Googoobear discovered a beautiful beehive nestled in an old oak tree. The busy bees were working hard, and their leader, Queen Buzzy, welcomed him with a warm smile.",
+          "Following his nose, Goo Goo discovered a beautiful beehive nestled in an old oak tree. The busy bees were working hard, and their leader, Queen Buzzy, welcomed him with a warm smile.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 3: Learning to Help",
         content:
-          "Queen Buzzy taught Googoobear how to help gather nectar from the flowers. Together, they worked as a team, and Googoobear learned that the sweetest honey comes from friendship and cooperation.",
+          "Queen Buzzy taught Goo Goo how to help gather nectar from the flowers. Together, they worked as a team, and Goo Goo learned that the sweetest honey comes from friendship and cooperation.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 4: The Sweet Reward",
         content:
-          "At the end of the day, Queen Buzzy shared a special jar of honey with Googoobear. As he tasted the golden sweetness, he realized that sharing adventures with friends made everything even more delicious.",
+          "At the end of the day, Queen Buzzy shared a special jar of honey with Goo Goo. As he tasted the golden sweetness, he realized that sharing adventures with friends made everything even more delicious.",
         image: "/placeholder.svg?height=300&width=400",
       },
     ],
@@ -44,25 +44,25 @@ const storyData: Record<string, any> = {
       {
         title: "Chapter 1: Lost in the Woods",
         content:
-          "Googoobear had wandered deeper into the forest than ever before. The tall trees seemed to whisper secrets, but now he couldn't find his way back home. His heart began to worry.",
+          "Goo Goo had wandered deeper into the forest than ever before. The tall trees seemed to whisper secrets, but now he couldn't find his way back home. His heart began to worry.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 2: A Helping Paw",
         content:
-          "Just when Googoobear felt most scared, a friendly rabbit named Rosie hopped out from behind a mushroom. 'Don't worry,' she said with a gentle smile, 'we'll help you find your way!'",
+          "Just when Goo Goo felt most scared, a friendly rabbit named Rosie hopped out from behind a mushroom. 'Don't worry,' she said with a gentle smile, 'we'll help you find your way!'",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 3: The Forest Family",
         content:
-          "Soon, Rosie introduced Googoobear to Oliver the wise owl and Penny the playful squirrel. Together, they formed a rescue team, each using their special skills to help guide Googoobear home.",
+          "Soon, Rosie introduced Goo Goo to Oliver the wise owl and Penny the playful squirrel. Together, they formed a rescue team, each using their special skills to help guide Goo Goo home.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 4: Home Sweet Home",
         content:
-          "As the sun set, Googoobear's new friends led him safely home. He learned that even when you're lost, kindness and friendship can always light the way back to where you belong.",
+          "As the sun set, Goo Goo's new friends led him safely home. He learned that even when you're lost, kindness and friendship can always light the way back to where you belong.",
         image: "/placeholder.svg?height=300&width=400",
       },
     ],
@@ -138,11 +138,10 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
               disabled={isFirstChapter}
               variant={isFirstChapter ? "outline" : "default"}
               size="lg"
-              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${
-                isFirstChapter
+              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isFirstChapter
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                   : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
-              }`}
+                }`}
             >
               <ChevronLeft className="w-5 h-5 mr-2" />
               Previous
@@ -166,11 +165,10 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
               disabled={isLastChapter}
               variant={isLastChapter ? "outline" : "default"}
               size="lg"
-              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${
-                isLastChapter
+              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isLastChapter
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                   : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
-              }`}
+                }`}
             >
               {isLastChapter ? "The End" : "Next"}
               {!isLastChapter && <ChevronRight className="w-5 h-5 ml-2" />}
@@ -184,13 +182,12 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
                 <button
                   key={index}
                   onClick={() => setCurrentChapter(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === currentChapter
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentChapter
                       ? "bg-green-600 scale-125"
                       : index < currentChapter
                         ? "bg-green-400"
                         : "bg-green-200"
-                  }`}
+                    }`}
                   aria-label={`Go to chapter ${index + 1}`}
                 />
               ))}
