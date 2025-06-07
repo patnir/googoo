@@ -46,8 +46,8 @@ export default function HomePage() {
               <div className="relative">
                 <div className="bg-white rounded-3xl p-6 shadow-xl border-4 border-amber-300 transform rotate-2">
                   <Image
-                    src="/placeholder.svg?height=400&width=350"
-                    alt="Goo Goo - A friendly brown bear with a warm smile, sitting in a meadow surrounded by colorful flowers"
+                    src="/goo-goo-bear.jpg"
+                    alt="Goo Goo - A friendly bear"
                     width={350}
                     height={400}
                     className="rounded-2xl"
