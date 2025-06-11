@@ -7,21 +7,49 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
-// Sample story data - in a real app, this would come from a database or CMS
 const storyData: Record<string, any> = {
+  "national-park-adventure": {
+    title: "Cousins in the National Parks",
+    chapters: [
+      {
+        title: "Chapter 1: The Big Adventure Begins",
+        content:
+          "Carolyn surprised Goo Goo with exciting news - they were going on a road trip to visit her bear cousins in America's national parks! Goo Goo could hardly contain her excitement as they packed their camping gear and favorite snacks.",
+        image: "/placeholder.svg?height=300&width=400",
+      },
+      {
+        title: "Chapter 2: Yellowstone Wonders",
+        content:
+          "Their first stop was Yellowstone, where Goo Goo met her cousin Bella the Black Bear. Together they watched Old Faithful erupt and learned about how the park rangers help protect the wildlife. Carolyn took lots of pictures of their adventures.",
+        image: "/placeholder.svg?height=300&width=400",
+      },
+      {
+        title: "Chapter 3: Yosemite Dreams",
+        content:
+          "In Yosemite, Goo Goo's cousin Grizzly Gary showed them the towering sequoia trees and taught them about keeping the park clean for all animals. Carolyn and Goo Goo were amazed by the beautiful waterfalls and massive granite cliffs.",
+        image: "/placeholder.svg?height=300&width=400",
+      },
+      {
+        title: "Chapter 4: Home Sweet Home",
+        content:
+          "After visiting all her cousins and learning about nature conservation, Goo Goo and Carolyn headed home with wonderful memories and new appreciation for America's wild places. They promised to visit again next summer!",
+        image: "/placeholder.svg?height=300&width=400",
+      },
+    ],
+  },
   "honey-adventure": {
     title: "The Great Honey Adventure",
     chapters: [
       {
         title: "Chapter 1: The Sweet Discovery",
         content:
-          "One sunny morning, Goo Goo was wandering through the meadow when he caught the most wonderful smell. It was sweet and golden, floating on the warm breeze like a magical invitation.",
+          "One sunny morning, Goo Goo was wandering through the meadow when she caught the most wonderful smell. It was sweet and golden, floating on the warm breeze like a magical invitation.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 2: Meeting the Bees",
         content:
-          "Following his nose, Goo Goo discovered a beautiful beehive nestled in an old oak tree. The busy bees were working hard, and their leader, Queen Buzzy, welcomed him with a warm smile.",
+          "Following her nose, Goo Goo discovered a beautiful beehive nestled in an old oak tree. The busy bees were working hard, and their leader, Queen Buzzy, welcomed her with a warm smile.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
@@ -33,7 +61,7 @@ const storyData: Record<string, any> = {
       {
         title: "Chapter 4: The Sweet Reward",
         content:
-          "At the end of the day, Queen Buzzy shared a special jar of honey with Goo Goo. As he tasted the golden sweetness, he realized that sharing adventures with friends made everything even more delicious.",
+          "At the end of the day, Queen Buzzy shared a special jar of honey with Goo Goo. As she tasted the golden sweetness, she realized that sharing adventures with friends made everything even more delicious.",
         image: "/placeholder.svg?height=300&width=400",
       },
     ],
@@ -44,25 +72,25 @@ const storyData: Record<string, any> = {
       {
         title: "Chapter 1: Lost in the Woods",
         content:
-          "Goo Goo had wandered deeper into the forest than ever before. The tall trees seemed to whisper secrets, but now he couldn't find his way back home. His heart began to worry.",
+          "Goo Goo had wandered deeper into the forest than ever before while playing hide and seek with Carolyn. The tall trees seemed to whisper secrets, but now she couldn't find her way back. Her heart began to worry.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 2: A Helping Paw",
         content:
-          "Just when Goo Goo felt most scared, a friendly rabbit named Rosie hopped out from behind a mushroom. 'Don't worry,' she said with a gentle smile, 'we'll help you find your way!'",
+          "Just when Goo Goo felt most scared, a friendly rabbit named Rosie hopped out from behind a mushroom. 'Don't worry,' she said with a gentle smile, 'we'll help you find your way back to Carolyn!'",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 3: The Forest Family",
         content:
-          "Soon, Rosie introduced Goo Goo to Oliver the wise owl and Penny the playful squirrel. Together, they formed a rescue team, each using their special skills to help guide Goo Goo home.",
+          "Soon, Rosie introduced Goo Goo to Oliver the wise owl and Penny the playful squirrel. Together, they formed a rescue team, each using their special skills to help guide Goo Goo back to her best friend.",
         image: "/placeholder.svg?height=300&width=400",
       },
       {
         title: "Chapter 4: Home Sweet Home",
         content:
-          "As the sun set, Goo Goo's new friends led him safely home. He learned that even when you're lost, kindness and friendship can always light the way back to where you belong.",
+          "As the sun set, Goo Goo's new friends led her safely back to Carolyn, who had been searching everywhere. She learned that even when you're lost, kindness and friendship can always light the way back to where you belong.",
         image: "/placeholder.svg?height=300&width=400",
       },
     ],
@@ -139,8 +167,8 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
               variant={isFirstChapter ? "outline" : "default"}
               size="lg"
               className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isFirstChapter
-                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
                 }`}
             >
               <ChevronLeft className="w-5 h-5 mr-2" />
@@ -166,8 +194,8 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
               variant={isLastChapter ? "outline" : "default"}
               size="lg"
               className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isLastChapter
-                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
                 }`}
             >
               {isLastChapter ? "The End" : "Next"}
@@ -183,16 +211,15 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
                   key={index}
                   onClick={() => setCurrentChapter(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentChapter
-                      ? "bg-green-600 scale-125"
-                      : index < currentChapter
-                        ? "bg-green-400"
-                        : "bg-green-200"
+                    ? "bg-green-600 scale-125"
+                    : index < currentChapter
+                      ? "bg-green-400"
+                      : "bg-green-200"
                     }`}
                   aria-label={`Go to chapter ${index + 1}`}
                 />
               ))}
             </div>
-            <p className="text-sm text-green-600 font-medium">Tap the dots to jump to any chapter</p>
           </div>
         </main>
       </div>

@@ -5,6 +5,12 @@ import Link from "next/link"
 
 const stories = [
   {
+    slug: "national-park-adventure",
+    title: "Cousins in the National Parks",
+    description: "Goo Goo and Carolyn embark on an exciting journey to visit her bear cousins in America's most beautiful national parks.",
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
     slug: "honey-adventure",
     title: "The Great Honey Adventure",
     description: "Goo Goo discovers a magical beehive and learns about friendship with the busy bees.",
@@ -13,31 +19,7 @@ const stories = [
   {
     slug: "forest-friends",
     title: "New Friends in the Forest",
-    description: "When Goo Goo gets lost, woodland creatures help him find his way home.",
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    slug: "rainy-day",
-    title: "The Rainy Day Surprise",
-    description: "A stormy day leads to an unexpected adventure and a beautiful rainbow.",
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    slug: "winter-wonder",
-    title: "Winter Wonderland",
-    description: "Goo Goo's first snow day brings magical discoveries and cozy moments.",
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    slug: "birthday-party",
-    title: "The Best Birthday Party",
-    description: "Goo Goo learns that the best gifts come from the heart.",
-    image: "/placeholder.svg?height=200&width=300",
-  },
-  {
-    slug: "sleepy-time",
-    title: "Sleepy Time Stories",
-    description: "Gentle tales perfect for winding down and drifting off to dreamland.",
+    description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
     image: "/placeholder.svg?height=200&width=300",
   },
 ]
@@ -53,9 +35,6 @@ export default function StoriesPage() {
               Goo Goo Stories
             </h1>
           </Link>
-          <p className="text-xl text-purple-700 max-w-2xl mx-auto">
-            Choose your favorite adventure and let the magic begin! ✨
-          </p>
         </header>
 
         {/* Stories Grid */}
