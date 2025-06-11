@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Goo Goo Bear',
     images: [
       {
-        url: '/goo-goo-bear.jpg',
+        url: '/carolyn-and-goo-goo.png',
         width: 350,
         height: 400,
         alt: 'Goo Goo - A friendly bear',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Goo Goo Bear - Enchanting Children\'s Stories',
     description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
-    images: ['/goo-goo-bear.jpg'],
+    images: ['/carolyn-and-goo-goo.png'],
     creator: '@googoobear',
   },
   viewport: {
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     maximumScale: 1,
   },
   icons: {
-    icon: '/goo-goo-bear.jpg',
-    apple: '/goo-goo-bear.jpg',
+    icon: '/carolyn-and-goo-goo.png',
+    apple: '/carolyn-and-goo-goo.png',
   },
 }
 
