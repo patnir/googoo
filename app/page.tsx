@@ -21,7 +21,7 @@ export default function HomePage() {
                 <h2 className="text-3xl font-bold text-amber-900 mb-6 font-serif">Welcome to Goo Goo's World! 🐻</h2>
 
                 <p className="text-lg text-amber-800 leading-relaxed mb-6">
-                  Join Goo Goo, a lovable female bear, and her best friend Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical
+                  Join Goo Goo, a lovable female bear, and her best friend, Carolyn, on gentle adventures through enchanted forests, cozy meadows, and magical
                   places where friendship and kindness always win the day.
                 </p>
 
