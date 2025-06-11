@@ -18,16 +18,17 @@ export default function HomePage() {
             {/* Left Column - Text */}
             <div className="space-y-6">
               <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-amber-200">
-                <h2 className="text-3xl font-bold text-amber-900 mb-6 font-serif">Welcome to Goo Goo's World! 🐻</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6 font-serif">Meet Goo Goo and Carolyn 🐻</h2>
 
                 <p className="text-lg text-amber-800 leading-relaxed mb-6">
-                  Join Goo Goo and Carolyn, on gentle adventures through enchanted forests, cozy meadows, and magical
-                  places where friendship and kindness always win the day.
+                  Come along with Goo Goo and Carolyn as they explore forests, meadows, and their own backyard.
+                  Their simple adventures show how everyday moments can be full of wonder.
                 </p>
 
                 <p className="text-base text-amber-700 leading-relaxed mb-8">
-                  Each story is crafted with care to spark imagination, teach valuable lessons, and create precious
-                  bedtime moments for families to share together. Follow along as this special bear and her young owner discover the magic in everyday moments.
+                  These stories share quiet moments between a young child and her beloved bear, where imagination
+                  leads the way and friendship makes everything better. Join them as they discover little bits of
+                  magic in their daily adventures.
                 </p>
 
                 <Link href="/stories">
@@ -74,13 +75,13 @@ export default function HomePage() {
           </div>
 
           {/* Bottom Section */}
-          <div className="text-center mt-16">
+          {/* <div className="text-center mt-16">
             <div className="bg-white/50 rounded-2xl p-6 inline-block">
               <p className="text-amber-700 font-medium">
-                Perfect for bedtime stories, quiet time, and family reading moments
+                Stories for sharing at bedtime, quiet time, or anytime
               </p>
             </div>
-          </div>
+          </div> */}
         </main>
       </div>
     </div>
