@@ -44,6 +44,7 @@ export default function HomePage() {
             {/* Right Column - Illustration */}
             <div className="flex justify-center">
               <div className="relative">
+                {/* Goo Goo's Image */}
                 <div className="bg-white rounded-3xl p-6 shadow-xl border-4 border-amber-300 transform rotate-2">
                   <Image
                     src="/goo-goo-bear.jpg"
@@ -53,9 +54,21 @@ export default function HomePage() {
                     className="rounded-2xl"
                   />
                 </div>
+                {/* Carolyn's Image */}
+                <div className="bg-white rounded-3xl p-6 shadow-xl border-4 border-amber-300 transform -rotate-2 mb-4">
+                  <Image
+                    src="/carolyn.png"
+                    alt="Carolyn - Goo Goo's best friend"
+                    width={350}
+                    height={400}
+                    className="rounded-2xl"
+                  />
+                </div>
+
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 text-4xl animate-bounce">🌟</div>
                 <div className="absolute -bottom-2 -left-4 text-3xl animate-pulse">🌸</div>
+                <div className="absolute top-1/2 right-0 text-3xl animate-pulse">💫</div>
               </div>
             </div>
           </div>
