@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Goo Goo Bear - Enchanting Children\'s Stories',
-  description: 'Join our lovable bear friend Goo Goo and her friend Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
+  description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
   generator: 'Next.js',
   applicationName: 'Goo Goo Bear',
   keywords: ['children stories', 'bedtime stories', 'kids books', 'bear stories', 'educational stories', 'girl and bear stories'],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Goo Goo Bear - Enchanting Children\'s Stories',
-    description: 'Join our lovable bear friend Goo Goo and her friend Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
+    description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
     url: 'https://googoobear.com',
     siteName: 'Goo Goo Bear',
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Goo Goo Bear - Enchanting Children\'s Stories',
-    description: 'Join our lovable bear friend Goo Goo and her friend Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
+    description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
     images: ['/goo-goo-bear.jpg'],
     creator: '@googoobear',
   },
