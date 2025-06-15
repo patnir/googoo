@@ -8,7 +8,7 @@ const stories = [
     slug: "national-park-adventure",
     title: "Cousins in the National Parks",
     description: "Goo Goo and Carolyn embark on an exciting journey to visit her bear cousins in America's most beautiful national parks.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/story1.png",
   },
   {
     slug: "honey-adventure",
