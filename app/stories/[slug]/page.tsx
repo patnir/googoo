@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { use, useState } from "react"
 
 const storyData: Record<string, any> = {
   "national-park-adventure": {
@@ -97,9 +97,10 @@ const storyData: Record<string, any> = {
   },
 }
 
-export default function StoryReader({ params }: { params: { slug: string } }) {
+export default function StoryReader({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const [currentChapter, setCurrentChapter] = useState(0)
-  const story = storyData[params.slug]
+  const story = storyData[slug]
 
   if (!story) {
     return (
