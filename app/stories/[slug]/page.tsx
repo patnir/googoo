@@ -21,7 +21,7 @@ const storyData: Record<string, any> = {
         title: "Chapter 2: Yellowstone Wonders",
         content:
           "Their first stop was Yellowstone, where Goo Goo met her cousin Bella the Black Bear. Together they watched Old Faithful erupt and learned about how the park rangers help protect the wildlife. Carolyn took lots of pictures of their adventures.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene2.png",
       },
       {
         title: "Chapter 3: Yosemite Dreams",
@@ -143,9 +143,9 @@ export default function StoryReader({ params }: { params: { slug: string } }) {
                 <Image
                   src={chapter.image || "/placeholder.svg"}
                   alt={`Illustration for ${chapter.title}`}
-                  width={400}
-                  height={300}
-                  className="w-full h-64 md:h-80 object-cover rounded-t-3xl"
+                  width={800}
+                  height={600}
+                  className="w-full min-h-80 max-h-96 md:max-h-[32rem] object-contain rounded-t-3xl bg-gradient-to-b from-green-50 to-blue-50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-t-3xl"></div>
               </div>
