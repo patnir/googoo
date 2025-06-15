@@ -1,14 +1,21 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  colorScheme: 'light',
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://googoobear.com'),
   title: 'Goo Goo Bear - Enchanting Children\'s Stories',
   description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
   generator: 'Next.js',
   applicationName: 'Goo Goo Bear',
   keywords: ['children stories', 'bedtime stories', 'kids books', 'bear stories', 'educational stories', 'girl and bear stories'],
   authors: [{ name: 'Goo Goo Bear and Carolyn' }],
-  colorScheme: 'light',
   other: {
     'pinterest-rich-pin': 'true',
     'og:image:width': '350',
@@ -39,11 +46,6 @@ export const metadata: Metadata = {
     description: 'Join Goo Goo and Carolyn on gentle adventures through enchanted forests, cozy meadows, and magical places where friendship and kindness always win the day.',
     images: ['/carolyn-goo-goo.png'],
     creator: '@googoobear',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
   },
   icons: {
     icon: '/carolyn-goo-goo.png',

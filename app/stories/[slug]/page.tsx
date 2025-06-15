@@ -15,7 +15,7 @@ const storyData: Record<string, any> = {
         title: "Chapter 1: The Big Adventure Begins",
         content:
           "Carolyn surprised Goo Goo with exciting news - they were going on a road trip to visit her bear cousins in America's national parks! Goo Goo could hardly contain her excitement as they packed their camping gear and favorite snacks.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene1.png",
       },
       {
         title: "Chapter 2: Yellowstone Wonders",
