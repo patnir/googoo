@@ -27,13 +27,13 @@ const storyData: Record<string, any> = {
         title: "Chapter 3: Yosemite Dreams",
         content:
           "In Yosemite, Goo Goo's cousin Grizzly Gary showed them the towering sequoia trees and taught them about keeping the park clean for all animals. Carolyn and Goo Goo were amazed by the beautiful waterfalls and massive granite cliffs.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene3.png",
       },
       {
         title: "Chapter 4: Home Sweet Home",
         content:
           "After visiting all her cousins and learning about nature conservation, Goo Goo and Carolyn headed home with wonderful memories and new appreciation for America's wild places. They promised to visit again next summer!",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene4.png",
       },
     ],
   },
