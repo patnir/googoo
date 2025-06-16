@@ -14,13 +14,13 @@ const stories = [
     slug: "honey-adventure",
     title: "The Great Honey Adventure",
     description: "Goo Goo discovers a magical beehive and learns about friendship with the busy bees.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/story2.png",
   },
   {
     slug: "forest-friends",
     title: "New Friends in the Forest",
     description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/story3.png",
   },
 ]
 
