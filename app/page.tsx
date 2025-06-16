@@ -48,7 +48,7 @@ export default function HomePage() {
                 {/* Goo Goo's Image */}
                 <div className="bg-white rounded-3xl p-6 shadow-xl border-4 border-amber-300 transform rotate-2">
                   <Image
-                    src="/goo-goo-bear.jpg"
+                    src="/goo-goo-bear.png"
                     alt="Goo Goo - A friendly bear"
                     width={350}
                     height={400}
