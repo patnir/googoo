@@ -73,25 +73,25 @@ const storyData: Record<string, any> = {
         title: "Chapter 1: Lost in the Woods",
         content:
           "Goo Goo had wandered deeper into the forest than ever before while playing hide and seek with Carolyn. The tall trees seemed to whisper secrets, but now she couldn't find her way back. Her heart began to worry.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene5.png",
       },
       {
         title: "Chapter 2: A Helping Paw",
         content:
           "Just when Goo Goo felt most scared, a friendly rabbit named Rosie hopped out from behind a mushroom. 'Don't worry,' she said with a gentle smile, 'we'll help you find your way back to Carolyn!'",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene6.png",
       },
       {
         title: "Chapter 3: The Forest Family",
         content:
           "Soon, Rosie introduced Goo Goo to Oliver the wise owl and Penny the playful squirrel. Together, they formed a rescue team, each using their special skills to help guide Goo Goo back to her best friend.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene7.png",
       },
       {
         title: "Chapter 4: Home Sweet Home",
         content:
           "As the sun set, Goo Goo's new friends led her safely back to Carolyn, who had been searching everywhere. She learned that even when you're lost, kindness and friendship can always light the way back to where you belong.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene8.png",
       },
     ],
   },
