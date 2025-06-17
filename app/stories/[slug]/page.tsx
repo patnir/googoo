@@ -44,25 +44,25 @@ const storyData: Record<string, any> = {
         title: "Chapter 1: The Sweet Discovery",
         content:
           "One sunny morning, Goo Goo was wandering through the meadow when she caught the most wonderful smell. It was sweet and golden, floating on the warm breeze like a magical invitation.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene9.png",
       },
       {
         title: "Chapter 2: Meeting the Bees",
         content:
           "Following her nose, Goo Goo discovered a beautiful beehive nestled in an old oak tree. The busy bees were working hard, and their leader, Queen Buzzy, welcomed her with a warm smile.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene10.png",
       },
       {
         title: "Chapter 3: Learning to Help",
         content:
           "Queen Buzzy taught Goo Goo how to help gather nectar from the flowers. Together, they worked as a team, and Goo Goo learned that the sweetest honey comes from friendship and cooperation.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene11.png",
       },
       {
         title: "Chapter 4: The Sweet Reward",
         content:
           "At the end of the day, Queen Buzzy shared a special jar of honey with Goo Goo. As she tasted the golden sweetness, she realized that sharing adventures with friends made everything even more delicious.",
-        image: "/placeholder.svg?height=300&width=400",
+        image: "/scene12.png",
       },
     ],
   },
