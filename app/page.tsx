@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-yellow-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         {/* Header */}
         <header className="text-center my-8">
           <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-2 font-serif">Goo Goo Bear</h1>

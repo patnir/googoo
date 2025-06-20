@@ -33,7 +33,7 @@ const stories = [
 export default function StoriesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         {/* Header */}
         <header className="text-center my-8">
           <Link href="/" className="inline-block mb-6">
