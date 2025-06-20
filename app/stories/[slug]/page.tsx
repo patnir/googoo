@@ -96,7 +96,7 @@ const storyData: Record<string, any> = {
       {
         title: "Chapter 5: Back Together",
         content:
-          "At last, Goo Goo landed with a gentle bump — right on Carolyn’s balcony! Carolyn laughed, Goo Goo squeaked, and they hugged and twirled with joy. Best friends, together again.",
+          "At last, Goo Goo landed with a gentle bump — right on Carolyn's balcony! Carolyn laughed, Goo Goo squeaked, and they hugged and twirled with joy. Best friends, together again.",
         image: "/scene17.png",
       },
     ],
@@ -182,6 +182,10 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
                   width={800}
                   height={600}
                   className="w-full min-h-80 max-h-96 md:max-h-[32rem] object-contain rounded-t-3xl bg-gradient-to-b from-green-50 to-blue-50"
+                  priority={currentChapter === 0}
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjFmNWY5Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2cHgiPkxvYWRpbmcuLi48L3RleHQ+Cjwvc3ZnPg=="
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-t-3xl"></div>
               </div>
