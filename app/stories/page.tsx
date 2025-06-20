@@ -35,7 +35,7 @@ export default function StoriesPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <header className="text-center mb-12">
+        <header className="text-center my-8">
           <Link href="/" className="inline-block mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-purple-800 font-serif hover:text-purple-600 transition-colors">
               Goo Goo Stories
