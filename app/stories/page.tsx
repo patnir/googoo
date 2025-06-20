@@ -5,6 +5,12 @@ import Link from "next/link"
 
 const stories = [
   {
+    slug: "seattle-catapult-adventure",
+    title: "Goo Goo's Trip to Seattle",
+    description: "Goo Goo builds a catapult to fly to Seattle and visit Carolyn.",
+    image: "/story4.png",
+  },
+  {
     slug: "national-park-adventure",
     title: "Cousins in the National Parks",
     description: "Goo Goo and Carolyn embark on an exciting journey to visit her bear cousins in America's most beautiful national parks.",
@@ -21,12 +27,6 @@ const stories = [
     title: "New Friends in the Forest",
     description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
     image: "/story3.png",
-  },
-  {
-    slug: "seattle-catapult-adventure",
-    title: "Goo Goo's Trip to Seattle",
-    description: "Goo Goo builds a catapult to fly to Seattle and visit Carolyn.",
-    image: "/story4.png",
   },
 ]
 
