@@ -22,6 +22,12 @@ const stories = [
     description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
     image: "/story3.png",
   },
+  {
+    slug: "seattle-catapult-adventure",
+    title: "Goo Goo's Trip to Seattle",
+    description: "Goo Goo builds a catapult to fly to Seattle and visit Carolyn.",
+    image: "/story4.png",
+  },
 ]
 
 export default function StoriesPage() {

@@ -66,6 +66,41 @@ const storyData: Record<string, any> = {
       },
     ],
   },
+  "seattle-catapult-adventure": {
+    title: "Goo Goo's Trip to Seattle",
+    chapters: [
+      {
+        title: "Chapter 1: Missing Carolyn",
+        content:
+          "Carolyn was in Seattle for the summer, and Goo Goo missed her so much. When Carolyn called to say hello and talk about the big tall Space Needle, Goo Goo wished she could be there too.",
+        image: "/scene13.png",
+      },
+      {
+        title: "Chapter 2: A Big Idea",
+        content:
+          "Then Goo Goo had a silly idea — what if she built a catapult to fly all the way to Seattle? Her forest friends giggled, but they all wanted to help.",
+        image: "/scene14.png",
+      },
+      {
+        title: "Chapter 3: Building the Catapult",
+        content:
+          "Rosie the rabbit found bendy branches, Oliver the owl drew a plan, and everyone helped tie, twist, and tug. Soon, the biggest catapult in the forest was ready!",
+        image: "/scene15.png",
+      },
+      {
+        title: "Chapter 4: Up, Up, Up!",
+        content:
+          "With a countdown and a BOING! Goo Goo flew through the sky! She zipped past clouds, waved at birds, and saw rivers and mountains far below.",
+        image: "/scene16.png",
+      },
+      {
+        title: "Chapter 5: Back Together",
+        content:
+          "At last, Goo Goo landed with a gentle bump — right on Carolyn’s balcony! Carolyn laughed, Goo Goo squeaked, and they hugged and twirled with joy. Best friends, together again.",
+        image: "/scene17.png",
+      },
+    ],
+  },
   "forest-friends": {
     title: "New Friends in the Forest",
     chapters: [
