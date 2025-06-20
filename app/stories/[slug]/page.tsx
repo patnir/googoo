@@ -177,6 +177,7 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
               {/* Chapter Image */}
               <div className="relative">
                 <Image
+                  key={currentChapter}
                   src={chapter.image || "/placeholder.svg"}
                   alt={`Illustration for ${chapter.title}`}
                   width={800}
