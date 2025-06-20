@@ -159,12 +159,21 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50">
-      <div className="container mx-auto px-4 py-4 max-w-4xl">
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header - Compact for mobile */}
-        <header className="text-center mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-green-800 mb-1 font-serif">{story.title}</h1>
-          <div className="text-green-600 text-sm font-medium">
-            Chapter {currentChapter + 1} of {story.chapters.length}
+        <header className="relative text-center mb-6">
+          {/* Back button - top left */}
+          <Link href="/stories" className="absolute left-0 top-0">
+            <Button
+              variant="ghost"
+              className="text-green-700 hover:bg-green-100 rounded-full p-2"
+            >
+              <ArrowLeft className="w-8 h-8" />
+            </Button>
+          </Link>
+
+          <div className="px-12">
+            <h1 className="text-2xl md:text-3xl font-bold text-green-800 mb-1 font-serif">{story.title}</h1>
           </div>
         </header>
 
@@ -194,25 +203,15 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
             <p className="text-base md:text-lg text-green-800 leading-relaxed font-medium">{chapter.content}</p>
           </div>
 
-          {/* Chapter Progress Dots - Move higher for better visibility */}
-          <div className="flex justify-center gap-2 py-2">
-            {story.chapters.map((_: any, index: number) => (
-              <button
-                key={index}
-                onClick={() => setCurrentChapter(index)}
-                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-200 ${index === currentChapter
-                  ? "bg-green-600 scale-125"
-                  : index < currentChapter
-                    ? "bg-green-400"
-                    : "bg-green-200"
-                  }`}
-                aria-label={`Go to chapter ${index + 1}`}
-              />
-            ))}
+          {/* Chapter indicator */}
+          <div className="flex justify-center py-2">
+            <div className="text-green-600 text-sm font-medium">
+              Chapter {currentChapter + 1} of {story.chapters.length}
+            </div>
           </div>
 
           {/* Navigation - Mobile-optimized with better spacing */}
-          <div className="space-y-4 pb-8">
+          <div className="pb-8">
             {/* Primary Navigation Row */}
             <div className="flex gap-3">
               {/* Previous Button */}
@@ -242,20 +241,6 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
                 {isLastChapter ? "The End" : "Next"}
                 {!isLastChapter && <ChevronRight className="w-5 h-5 ml-2" />}
               </Button>
-            </div>
-
-            {/* Back to Stories - Secondary action */}
-            <div className="flex justify-center">
-              <Link href="/stories">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-white/70 border-2 border-green-300 text-green-700 hover:bg-green-100 rounded-xl px-8 py-3 font-semibold"
-                >
-                  <ArrowLeft className="w-5 h-5 mr-2" />
-                  All Stories
-                </Button>
-              </Link>
             </div>
           </div>
         </main>
