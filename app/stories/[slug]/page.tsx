@@ -159,107 +159,103 @@ export default function StoryReader({ params }: { params: Promise<{ slug: string
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-green-800 mb-2 font-serif">{story.title}</h1>
-          <div className="flex items-center justify-center gap-2 text-green-600">
-            <span className="text-sm font-medium">
-              Chapter {currentChapter + 1} of {story.chapters.length}
-            </span>
+      <div className="container mx-auto px-4 py-4 max-w-4xl">
+        {/* Header - Compact for mobile */}
+        <header className="text-center mb-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-green-800 mb-1 font-serif">{story.title}</h1>
+          <div className="text-green-600 text-sm font-medium">
+            Chapter {currentChapter + 1} of {story.chapters.length}
           </div>
         </header>
 
-        {/* Story Content */}
-        <main className="max-w-4xl mx-auto">
-          <Card className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-3xl shadow-xl mb-8">
-            <CardContent className="p-0">
-              {/* Chapter Image */}
-              <div className="relative">
-                <Image
-                  key={currentChapter}
-                  src={chapter.image || "/placeholder.svg"}
-                  alt={`Illustration for ${chapter.title}`}
-                  width={800}
-                  height={600}
-                  className="w-full min-h-80 max-h-96 md:max-h-[32rem] object-contain rounded-t-3xl bg-gradient-to-b from-green-50 to-blue-50"
-                  priority={currentChapter === 0}
-                  placeholder="blur"
-                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjFmNWY5Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2cHgiPkxvYWRpbmcuLi48L3RleHQ+Cjwvc3ZnPg=="
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-t-3xl"></div>
-              </div>
-
-              {/* Chapter Content */}
-              <div className="p-8 md:p-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-green-900 mb-6 font-serif">{chapter.title}</h2>
-                <p className="text-lg text-green-800 leading-relaxed font-medium">{chapter.content}</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Navigation */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-            {/* Previous Button */}
-            <Button
-              onClick={() => setCurrentChapter(Math.max(0, currentChapter - 1))}
-              disabled={isFirstChapter}
-              variant={isFirstChapter ? "outline" : "default"}
-              size="lg"
-              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isFirstChapter
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
-                }`}
-            >
-              <ChevronLeft className="w-5 h-5 mr-2" />
-              Previous
-            </Button>
-
-            {/* Back to Stories */}
-            <Link href="/stories">
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/70 border-2 border-green-300 text-green-700 hover:bg-green-100 rounded-full px-6 py-3 font-semibold"
-              >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                All Stories
-              </Button>
-            </Link>
-
-            {/* Next Button */}
-            <Button
-              onClick={() => setCurrentChapter(Math.min(story.chapters.length - 1, currentChapter + 1))}
-              disabled={isLastChapter}
-              variant={isLastChapter ? "outline" : "default"}
-              size="lg"
-              className={`rounded-full px-6 py-3 font-semibold transition-all duration-200 ${isLastChapter
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-green-600 hover:bg-green-700 text-white hover:shadow-lg"
-                }`}
-            >
-              {isLastChapter ? "The End" : "Next"}
-              {!isLastChapter && <ChevronRight className="w-5 h-5 ml-2" />}
-            </Button>
+        {/* Story Content - Mobile-first design */}
+        <main className="space-y-6">
+          {/* Image Section - Prominent and mobile-optimized */}
+          <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden">
+            <div className="relative">
+              <Image
+                key={currentChapter}
+                src={chapter.image || "/placeholder.svg"}
+                alt={`Illustration for ${chapter.title}`}
+                width={800}
+                height={600}
+                className="w-full h-64 sm:h-80 md:h-96 object-contain bg-gradient-to-b from-green-50 to-blue-50"
+                priority={currentChapter === 0}
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjFmNWY5Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2cHgiPkxvYWRpbmcuLi48L3RleHQ+Cjwvc3ZnPg=="
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              />
+            </div>
           </div>
 
-          {/* Chapter Progress */}
-          <div className="mt-8 text-center">
-            <div className="flex justify-center gap-2 mb-4">
-              {story.chapters.map((_: any, index: number) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentChapter(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentChapter
-                    ? "bg-green-600 scale-125"
-                    : index < currentChapter
-                      ? "bg-green-400"
-                      : "bg-green-200"
-                    }`}
-                  aria-label={`Go to chapter ${index + 1}`}
-                />
-              ))}
+          {/* Story Text - Readable and well-spaced */}
+          <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold text-green-900 mb-4 font-serif">{chapter.title}</h2>
+            <p className="text-base md:text-lg text-green-800 leading-relaxed font-medium">{chapter.content}</p>
+          </div>
+
+          {/* Chapter Progress Dots - Move higher for better visibility */}
+          <div className="flex justify-center gap-2 py-2">
+            {story.chapters.map((_: any, index: number) => (
+              <button
+                key={index}
+                onClick={() => setCurrentChapter(index)}
+                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-200 ${index === currentChapter
+                  ? "bg-green-600 scale-125"
+                  : index < currentChapter
+                    ? "bg-green-400"
+                    : "bg-green-200"
+                  }`}
+                aria-label={`Go to chapter ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation - Mobile-optimized with better spacing */}
+          <div className="space-y-4 pb-8">
+            {/* Primary Navigation Row */}
+            <div className="flex gap-3">
+              {/* Previous Button */}
+              <Button
+                onClick={() => setCurrentChapter(Math.max(0, currentChapter - 1))}
+                disabled={isFirstChapter}
+                size="lg"
+                className={`flex-1 rounded-xl py-4 font-semibold text-base transition-all duration-200 ${isFirstChapter
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl"
+                  }`}
+              >
+                <ChevronLeft className="w-5 h-5 mr-2" />
+                Previous
+              </Button>
+
+              {/* Next Button */}
+              <Button
+                onClick={() => setCurrentChapter(Math.min(story.chapters.length - 1, currentChapter + 1))}
+                disabled={isLastChapter}
+                size="lg"
+                className={`flex-1 rounded-xl py-4 font-semibold text-base transition-all duration-200 ${isLastChapter
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl"
+                  }`}
+              >
+                {isLastChapter ? "The End" : "Next"}
+                {!isLastChapter && <ChevronRight className="w-5 h-5 ml-2" />}
+              </Button>
+            </div>
+
+            {/* Back to Stories - Secondary action */}
+            <div className="flex justify-center">
+              <Link href="/stories">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white/70 border-2 border-green-300 text-green-700 hover:bg-green-100 rounded-xl px-8 py-3 font-semibold"
+                >
+                  <ArrowLeft className="w-5 h-5 mr-2" />
+                  All Stories
+                </Button>
+              </Link>
             </div>
           </div>
         </main>
