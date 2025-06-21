@@ -28,6 +28,12 @@ const stories = [
     description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
     image: "/story3.png",
   },
+  {
+    slug: "summer-overalls",
+    title: "Summer Overalls",
+    description: "Goo Goo gets a new outfit for summer.",
+    image: "/story5.png",
+  },
 ]
 
 export default function StoriesPage() {

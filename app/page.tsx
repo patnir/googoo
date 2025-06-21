@@ -9,7 +9,6 @@ export default function HomePage() {
         {/* Header */}
         <header className="text-center my-8">
           <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-2 font-serif">Goo Goo Bear</h1>
-
         </header>
 
         {/* Hero Section - Images First for Mobile */}
@@ -24,9 +23,9 @@ export default function HomePage() {
                   <Image
                     src="/goo-goo-bear.png"
                     alt="Goo Goo - A friendly bear"
-                    width={250}
-                    height={250}
-                    className="w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-xl"
+                    width={400}
+                    height={400}
+                    className="w-[200px] h-auto sm:w-[300px] rounded-xl object-contain"
                   />
                 </div>
 
@@ -35,9 +34,9 @@ export default function HomePage() {
                   <Image
                     src="/carolyn.png"
                     alt="Carolyn - Goo Goo's best friend"
-                    width={250}
-                    height={250}
-                    className="w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-xl"
+                    width={400}
+                    height={400}
+                    className="w-[200px] h-auto sm:w-[300px] rounded-xl object-contain"
                   />
                 </div>
               </div>

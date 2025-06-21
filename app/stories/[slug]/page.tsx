@@ -37,6 +37,41 @@ const storyData: Record<string, any> = {
       },
     ],
   },
+  "summer-overalls": {
+    title: "Summer Overalls",
+    chapters: [
+      {
+        title: "Chapter 1: A Warmer Day",
+        content:
+          "The flowers were blooming and the air felt different. Winter was over. Goo Goo slipped on her mint green sweater, like she always did, and headed outside to play.",
+        image: "/scene18.png",
+      },
+      {
+        title: "Chapter 2: Too Hot",
+        content:
+          "The sun was bright. The birds were singing. But Goo Goo was too warm. Her sweater felt heavy in the heat. She sat under a tree and fanned herself with a big leaf.",
+        image: "/scene19.png",
+      },
+      {
+        title: "Chapter 3: A New Idea",
+        content:
+          "Carolyn watched Goo Goo resting in the shade. She went inside and opened her sewing basket. She found soft, red and white checkered fabric. It gave her an idea.",
+        image: "/scene20.png",
+      },
+      {
+        title: "Chapter 4: Sewing Time",
+        content:
+          "Carolyn snipped and stitched. Rosie the rabbit brought string. The older girls minded Goo Goo. Oliver the owl flapped gently to keep her cool. Piece by piece, something new began to take shape.",
+        image: "/scene21.png",
+      },
+      {
+        title: "Chapter 5: A Perfect Fit",
+        content:
+          "When the overalls were ready, Goo Goo tried them on. They were light, breezy, and just right for summer. She twirled in the sun and smiled. The sweater could wait for fall.",
+        image: "/scene22.png",
+      },
+    ],
+  },
   "honey-adventure": {
     title: "The Great Honey Adventure",
     chapters: [
