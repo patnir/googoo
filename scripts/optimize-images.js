@@ -10,6 +10,22 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
+const isImageOptimized = (name) => {
+  // Check if all optimized versions exist
+  const webpPath = path.join(outputDir, `${name}.webp`);
+  const avifPath = path.join(outputDir, `${name}.avif`);
+  
+  const responsiveSizes = [400, 800, 1200];
+  const responsivePaths = responsiveSizes.map(size => 
+    path.join(outputDir, `${name}-${size}w.webp`)
+  );
+  
+  // Return true if all files exist
+  return fs.existsSync(webpPath) && 
+         fs.existsSync(avifPath) && 
+         responsivePaths.every(p => fs.existsSync(p));
+};
+
 const optimizeImages = async () => {
   const files = fs.readdirSync(publicDir)
     .filter(file => /\.(png|jpg|jpeg)$/i.test(file));
@@ -17,6 +33,12 @@ const optimizeImages = async () => {
   for (const file of files) {
     const inputPath = path.join(publicDir, file);
     const name = path.parse(file).name;
+    
+    // Skip if already optimized
+    if (isImageOptimized(name)) {
+      console.log(`Skipping ${file} - already optimized`);
+      continue;
+    }
     
     console.log(`Optimizing ${file}...`);
     
