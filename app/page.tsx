@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-const isUnderConstruction = false; // process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION !== "false";
+const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION !== "false";
 
 function UnderConstruction() {
   return (
