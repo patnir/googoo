@@ -2,29 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-
-const isUnderConstruction = process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION !== "false";
-
-function UnderConstruction() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-yellow-50">
-      <div className="container mx-auto px-4 py-4">
-        <header className="text-center my-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-2 font-serif">Goo Goo Bear</h1>
-        </header>
-        <main className="max-w-4xl mx-auto">
-          <p>This page is under construction. Please check back soon!</p>
-        </main>
-      </div>
-    </div>
-  );
-}
-
 export default function HomePage() {
-  if (isUnderConstruction) {
-    return <UnderConstruction />;
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-yellow-50">
       <div className="container mx-auto px-4 py-4">
