@@ -205,7 +205,7 @@ export const storyData: Record<string, Story> = {
       {
         title: "Chapter 4: Gelato in the Village",
         content:
-          "Back down in the mountain village, Carolyn surprised Goo Goo with the most delicious Italian gelato. Goo Goo chose stracciatella while Carolyn picked pistachio. They sat on a bench, licking their gelato and looking up at the magnificent peaks, already planning their next Alpine adventure.",
+          "Back down in the mountain village, Carolyn surprised Goo Goo with the most delicious Italian gelato. Goo Goo chose stracciatella while Carolyn picked lemon. They sat on a bench, licking their gelato and looking up at the magnificent peaks, already planning their next adventure.",
         image: "/scene26.png",
       },
     ],
