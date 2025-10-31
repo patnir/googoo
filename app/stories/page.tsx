@@ -1,40 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { getStoryList } from "@/lib/storyData"
 import Image from "next/image"
 import Link from "next/link"
 
-const stories = [
-  {
-    slug: "seattle-catapult-adventure",
-    title: "Goo Goo's Trip to Seattle",
-    description: "Goo Goo builds a catapult to fly to Seattle and visit Carolyn.",
-    image: "/story4.png",
-  },
-  {
-    slug: "national-park-adventure",
-    title: "Cousins in the National Parks",
-    description: "Goo Goo and Carolyn embark on an exciting journey to visit her bear cousins in America's most beautiful national parks.",
-    image: "/story1.png",
-  },
-  {
-    slug: "honey-adventure",
-    title: "The Great Honey Adventure",
-    description: "Goo Goo discovers a magical beehive and learns about friendship with the busy bees.",
-    image: "/story2.png",
-  },
-  {
-    slug: "forest-friends",
-    title: "New Friends in the Forest",
-    description: "When Goo Goo gets lost, woodland creatures help her find her way back to Carolyn.",
-    image: "/story3.png",
-  },
-  {
-    slug: "summer-overalls",
-    title: "Summer Overalls",
-    description: "Goo Goo gets a new outfit for summer.",
-    image: "/story5.png",
-  },
-]
+const stories = getStoryList()
 
 export default function StoriesPage() {
   return (
