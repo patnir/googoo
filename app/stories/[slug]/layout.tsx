@@ -14,7 +14,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const storyTitle = `${story.title} - Goo Goo Bear`
   const storyUrl = `https://googoobear.com/stories/${slug}`
-  const previewImage = story.chapters[0]?.image || story.image
 
   return {
     title: storyTitle,
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'Goo Goo Bear',
       images: [
         {
-          url: previewImage,
+          url: story.image,
           width: 800,
           height: 600,
           alt: story.title,
@@ -39,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: 'summary_large_image',
       title: storyTitle,
       description: story.description,
-      images: [previewImage],
+      images: [story.image],
       creator: '@googoobear',
     },
   }
