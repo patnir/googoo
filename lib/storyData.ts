@@ -179,10 +179,42 @@ export const storyData: Record<string, Story> = {
       },
     ],
   },
+  "alps-adventure": {
+    title: "Adventure in the Italian Alps",
+    description: "Goo Goo and Carolyn visit the stunning mountains of Northern Italy, meeting mountain cows and discovering Alpine magic.",
+    image: "/story6.png",
+    chapters: [
+      {
+        title: "Chapter 1: The Dramatic Peaks",
+        content:
+          "Carolyn had a surprise for Goo Goo - they were going to the Italian Alps! As they arrived in the mountain village, Goo Goo gasped at the sight of the Seceda ridgeline rising like giant green waves against the bright blue sky. The peaks of the Dolomites stretched as far as she could see.",
+        image: "/scene23.png",
+      },
+      {
+        title: "Chapter 2: Gondola to the Sky",
+        content:
+          "They stepped into a gondola that carried them up, up, up the mountainside. As they floated higher, Goo Goo spotted brown and white cows grazing in the green meadows below. The gentle sound of cowbells rang through the valley like a mountain song. When they reached the top, a friendly cow with the biggest bell greeted them with a warm 'Moo!' and told them stories about life in the Alps.",
+        image: "/scene24.png",
+      },
+      {
+        title: "Chapter 3: Cozy Mountain Hut",
+        content:
+          "As clouds rolled past the peaks, Carolyn led Goo Goo to a charming rifugio - a cozy mountain hut with wooden beams and checkered curtains. Inside, it was warm and smelled of chocolate. They sat by the window with steaming cups of hot chocolate topped with whipped cream, watching the sun paint the Dolomites pink and orange.",
+        image: "/scene25.png",
+      },
+      {
+        title: "Chapter 4: Gelato in the Village",
+        content:
+          "Back down in the mountain village, Carolyn surprised Goo Goo with the most delicious Italian gelato. Goo Goo chose stracciatella while Carolyn picked pistachio. They sat on a bench, licking their gelato and looking up at the magnificent peaks, already planning their next Alpine adventure.",
+        image: "/scene26.png",
+      },
+    ],
+  },
 }
 
 // Story display order
 const storyOrder = [
+  "alps-adventure",
   "seattle-catapult-adventure",
   "national-park-adventure",
   "honey-adventure",

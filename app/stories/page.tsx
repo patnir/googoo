@@ -25,9 +25,9 @@ export default function StoriesPage() {
             {stories.map((story) => (
               <Card
                 key={story.slug}
-                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-2 border-purple-200 rounded-3xl overflow-hidden"
+                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-2 border-purple-200 rounded-3xl overflow-hidden flex flex-col"
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 flex flex-col flex-grow">
                   <div className="relative">
                     <Image
                       src={story.image || "/placeholder.svg"}
@@ -39,11 +39,11 @@ export default function StoriesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
 
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-purple-900 mb-3 font-serif group-hover:text-purple-600 transition-colors">
                       {story.title}
                     </h3>
-                    <p className="text-purple-700 text-sm leading-relaxed mb-4">{story.description}</p>
+                    <p className="text-purple-700 text-sm leading-relaxed mb-4 flex-grow">{story.description}</p>
 
                     <Link href={`/stories/${story.slug}`}>
                       <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold py-2 transition-all duration-200">
