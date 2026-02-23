@@ -60,7 +60,7 @@ export default async function StoryPage({
           <div className="text-center mt-8">
             <Link
               href={`/stories/${slug}/1`}
-              className="inline-block py-3 px-8 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+              className="inline-block py-3 px-8 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-serif font-semibold transition-colors"
             >
               Start Reading
             </Link>

@@ -48,7 +48,7 @@ export default function StoriesPage() {
           <div className="text-center mt-10">
             <Link
               href="/"
-              className="inline-block py-3 px-6 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold transition-colors"
+              className="inline-block py-3 px-6 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-serif font-semibold transition-colors"
             >
               Back to Home
             </Link>

@@ -72,7 +72,7 @@ export default async function ChapterPage({
           ) : (
             <Link
               href={`/stories/${slug}/${chapterIndex}`}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-serif font-semibold transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
               <span className="hidden sm:inline">Previous</span>
@@ -82,14 +82,14 @@ export default async function ChapterPage({
           {isLast ? (
             <Link
               href={`/stories/${slug}`}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-serif font-semibold transition-colors"
             >
               The End
             </Link>
           ) : (
             <Link
               href={`/stories/${slug}/${chapterIndex + 2}`}
-              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-serif font-semibold transition-colors"
             >
               <span className="hidden sm:inline">Next</span>
               <ChevronRight className="w-5 h-5" />

@@ -76,7 +76,7 @@ function UnderConstruction() {
           <h1 className="text-4xl md:text-6xl font-bold text-amber-800 mb-2 font-serif">Goo Goo Bear</h1>
         </header>
         <main className="max-w-4xl mx-auto">
-          <p>This page is under construction. Please check back soon!</p>
+          <p className="font-serif">This page is under construction. Please check back soon!</p>
         </main>
       </div>
     </div>
