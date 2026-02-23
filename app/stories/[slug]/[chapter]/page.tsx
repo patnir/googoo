@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { storyData } from "@/lib/storyData"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
@@ -23,87 +22,81 @@ export default async function ChapterPage({
   const isLast = chapterIndex === story.chapters.length - 1
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50">
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
-        <header className="text-center mb-6">
+    <div className="min-h-screen bg-[#fdf8f0]">
+      {/* Thin top bar with story name and chapter count */}
+      <nav className="bg-white/60 backdrop-blur-sm border-b border-amber-100">
+        <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between">
           <Link
             href={`/stories/${slug}`}
-            className="text-green-700 hover:text-green-900 text-sm font-medium transition-colors"
+            className="text-amber-700 hover:text-amber-900 text-sm font-medium transition-colors"
           >
+            <ChevronLeft className="w-4 h-4 inline -mt-0.5" />
             {story.title}
           </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-green-800 mt-1 font-serif">
+          <span className="text-amber-500 text-sm">
+            {chapterIndex + 1} / {story.chapters.length}
+          </span>
+        </div>
+      </nav>
+
+      <main className="max-w-3xl mx-auto px-4 pt-6 pb-12">
+        {/* The illustration -- the star of the show */}
+        <div className="rounded-3xl overflow-hidden shadow-xl border border-amber-100 bg-white">
+          <Image
+            src={current.image || "/placeholder.svg"}
+            alt={`Illustration for ${current.title}`}
+            width={800}
+            height={600}
+            className="w-full aspect-[4/3] object-cover"
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZmRmOGYwIi8+Cjwvc3ZnPg=="
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+
+        {/* Story text -- warm, readable, like a book page */}
+        <div className="mt-6 px-2 sm:px-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-amber-900 font-serif mb-3">
             {current.title}
-          </h1>
-        </header>
+          </h2>
+          <p className="text-lg sm:text-xl text-amber-950 leading-relaxed font-serif">
+            {current.content}
+          </p>
+        </div>
 
-        <main className="space-y-6">
-          <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden">
-            <Image
-              src={current.image || "/placeholder.svg"}
-              alt={`Illustration for ${current.title}`}
-              width={800}
-              height={600}
-              className="w-full h-64 sm:h-80 md:h-96 object-contain bg-gradient-to-b from-green-50 to-blue-50"
-              priority
-              placeholder="blur"
-              blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjFmNWY5Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE2cHgiPkxvYWRpbmcuLi48L3RleHQ+Cjwvc3ZnPg=="
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-            />
-          </div>
+        {/* Navigation -- simple, gentle */}
+        <div className="mt-10 flex items-center gap-4">
+          {isFirst ? (
+            <div className="flex-1" />
+          ) : (
+            <Link
+              href={`/stories/${slug}/${chapterIndex}`}
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5" />
+              <span className="hidden sm:inline">Previous</span>
+            </Link>
+          )}
 
-          <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-8">
-            <p className="text-base md:text-lg text-green-800 leading-relaxed font-medium">
-              {current.content}
-            </p>
-          </div>
-
-          <div className="flex gap-3 pb-8">
-            {isFirst ? (
-              <Link href={`/stories/${slug}`} className="flex-1">
-                <Button
-                  size="lg"
-                  className="w-full rounded-xl py-4 font-semibold text-base bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  <ChevronLeft className="w-5 h-5 mr-2" />
-                  All Chapters
-                </Button>
-              </Link>
-            ) : (
-              <Link href={`/stories/${slug}/${chapterIndex}`} className="flex-1">
-                <Button
-                  size="lg"
-                  className="w-full rounded-xl py-4 font-semibold text-base bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  <ChevronLeft className="w-5 h-5 mr-2" />
-                  Previous
-                </Button>
-              </Link>
-            )}
-
-            {isLast ? (
-              <Link href={`/stories/${slug}`} className="flex-1">
-                <Button
-                  size="lg"
-                  className="w-full rounded-xl py-4 font-semibold text-base bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  Back to Story
-                </Button>
-              </Link>
-            ) : (
-              <Link href={`/stories/${slug}/${chapterIndex + 2}`} className="flex-1">
-                <Button
-                  size="lg"
-                  className="w-full rounded-xl py-4 font-semibold text-base bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  Next
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            )}
-          </div>
-        </main>
-      </div>
+          {isLast ? (
+            <Link
+              href={`/stories/${slug}`}
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+            >
+              The End
+            </Link>
+          ) : (
+            <Link
+              href={`/stories/${slug}/${chapterIndex + 2}`}
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="w-5 h-5" />
+            </Link>
+          )}
+        </div>
+      </main>
     </div>
   )
 }
