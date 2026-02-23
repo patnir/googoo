@@ -28,7 +28,7 @@ export default async function StoryPage({
           <h1 className="text-3xl md:text-4xl font-bold text-amber-900 mt-2 font-serif">
             {story.title}
           </h1>
-          <p className="text-amber-700 mt-3 max-w-xl mx-auto">{story.description}</p>
+          <p className="text-amber-700 mt-3 max-w-xl mx-auto font-serif">{story.description}</p>
         </header>
 
         <main>
@@ -48,7 +48,7 @@ export default async function StoryPage({
                     className="w-full aspect-[4/3] object-cover"
                   />
                   <div className="p-3">
-                    <p className="text-xs sm:text-sm font-semibold text-amber-900 group-hover:text-amber-700 transition-colors leading-tight">
+                    <p className="text-xs sm:text-sm font-semibold text-amber-900 group-hover:text-amber-700 transition-colors leading-tight font-serif">
                       {chapter.title}
                     </p>
                   </div>

@@ -36,7 +36,7 @@ export default function StoriesPage() {
                     <h2 className="text-lg font-bold text-amber-900 font-serif group-hover:text-amber-700 transition-colors mb-2">
                       {story.title}
                     </h2>
-                    <p className="text-amber-700 text-sm leading-relaxed">
+                    <p className="text-amber-700 text-sm leading-relaxed font-serif">
                       {story.description}
                     </p>
                   </div>

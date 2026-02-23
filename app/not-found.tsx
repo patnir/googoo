@@ -15,7 +15,7 @@ export default function NotFound() {
         <h1 className="text-3xl font-bold text-amber-900 font-serif mb-3">
           Oh no, Goo Goo got lost!
         </h1>
-        <p className="text-lg text-amber-700 mb-8">
+        <p className="text-lg text-amber-700 mb-8 font-serif">
           This page wandered off into the forest. Let's head back to somewhere safe.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

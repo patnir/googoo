@@ -54,7 +54,7 @@ export default function HomePage() {
                 Meet Goo Goo and Carolyn 🐻
               </h2>
 
-              <p className="text-sm sm:text-base md:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6 font-serif">
                 Join their magical adventures in forests, meadows, and everyday moments full of wonder!
               </p>
 
