@@ -26,14 +26,22 @@ export default async function ChapterPage({
       {/* Thin top bar with story name and chapter count */}
       <nav className="bg-white/60 backdrop-blur-sm border-b border-amber-100">
         <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between">
-          <Link
-            href={`/stories/${slug}`}
-            className="text-amber-700 hover:text-amber-900 text-sm font-medium transition-colors"
-          >
-            <ChevronLeft className="w-4 h-4 inline -mt-0.5" />
-            {story.title}
-          </Link>
-          <span className="text-amber-500 text-sm">
+          <div className="flex items-center gap-1 text-sm">
+            <Link
+              href="/"
+              className="text-amber-500 hover:text-amber-700 font-serif font-medium transition-colors"
+            >
+              Goo Goo Bear
+            </Link>
+            <span className="text-amber-300">/</span>
+            <Link
+              href={`/stories/${slug}`}
+              className="text-amber-700 hover:text-amber-900 font-serif font-medium transition-colors"
+            >
+              {story.title}
+            </Link>
+          </div>
+          <span className="text-amber-500 text-sm font-serif">
             {chapterIndex + 1} / {story.chapters.length}
           </span>
         </div>

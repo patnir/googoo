@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Nunito, Lora } from 'next/font/google';
+import { Lora, Nunito } from 'next/font/google';
 import './globals.css';
 
 const nunito = Nunito({
@@ -97,7 +97,16 @@ export default function RootLayout({
   }
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${lora.variable}`}>{children}</body>
+      <body className={`${nunito.variable} ${lora.variable} bg-[#fdf8f0]`}>
+        <div className="min-h-screen flex flex-col">
+          <div className="flex-grow">{children}</div>
+          <footer className="py-6 text-center">
+            <p className="text-sm text-amber-400 font-serif">
+              Goo Goo Bear
+            </p>
+          </footer>
+        </div>
+      </body>
     </html>
   )
 }

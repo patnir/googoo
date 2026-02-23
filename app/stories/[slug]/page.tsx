@@ -20,10 +20,10 @@ export default async function StoryPage({
       <div className="max-w-4xl mx-auto px-4 py-8">
         <header className="text-center mb-8">
           <Link
-            href="/stories"
-            className="text-amber-600 hover:text-amber-800 text-sm font-medium transition-colors"
+            href="/"
+            className="text-amber-600 hover:text-amber-800 text-sm font-serif font-medium transition-colors"
           >
-            All Stories
+            Goo Goo Bear
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-amber-900 mt-2 font-serif">
             {story.title}
@@ -32,26 +32,24 @@ export default async function StoryPage({
         </header>
 
         <main>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="flex flex-col gap-3 max-w-2xl mx-auto">
             {story.chapters.map((chapter, i) => (
               <Link
                 key={i}
                 href={`/stories/${slug}/${i + 1}`}
                 className="group"
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                <div className="flex items-center gap-4 bg-white rounded-2xl overflow-hidden shadow-md border border-amber-100 hover:shadow-xl transition-all duration-200 p-3 sm:p-4">
                   <Image
                     src={chapter.image || "/placeholder.svg"}
                     alt={`Illustration for ${chapter.title}`}
-                    width={300}
+                    width={200}
                     height={200}
-                    className="w-full aspect-[4/3] object-cover"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover flex-shrink-0"
                   />
-                  <div className="p-3">
-                    <p className="text-xs sm:text-sm font-semibold text-amber-900 group-hover:text-amber-700 transition-colors leading-tight font-serif">
-                      {chapter.title}
-                    </p>
-                  </div>
+                  <p className="text-sm sm:text-base font-semibold text-amber-900 group-hover:text-amber-700 transition-colors font-serif">
+                    {chapter.title}
+                  </p>
                 </div>
               </Link>
             ))}
