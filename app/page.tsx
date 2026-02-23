@@ -41,9 +41,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Decorative elements - smaller on mobile */}
-              <div className="absolute -top-2 -right-2 text-xl sm:text-3xl animate-bounce">🌟</div>
-              <div className="absolute -bottom-1 -left-2 text-xl sm:text-3xl animate-pulse">🌸</div>
             </div>
           </div>
 
@@ -51,7 +48,7 @@ export default function HomePage() {
           <div className="text-center">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border-2 border-amber-200 mx-auto max-w-sm sm:max-w-md">
               <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-amber-900 mb-2 sm:mb-4 font-serif">
-                Meet Goo Goo and Carolyn 🐻
+                Meet Goo Goo and Carolyn
               </h2>
 
               <p className="text-sm sm:text-base md:text-lg text-amber-800 leading-relaxed mb-4 sm:mb-6 font-serif">
@@ -61,9 +58,9 @@ export default function HomePage() {
               <Link href="/stories">
                 <Button
                   size="default"
-                  className="bg-amber-600 hover:bg-amber-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 w-full sm:w-auto"
+                  className="bg-amber-600 hover:bg-amber-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-serif font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 w-full sm:w-auto"
                 >
-                  📚 Read Stories
+                  Read Stories
                 </Button>
               </Link>
             </div>
