@@ -10,6 +10,10 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['var(--font-nunito)', 'Arial', 'Helvetica', 'sans-serif'],
+				serif: ['var(--font-lora)', 'Georgia', 'serif'],
+			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

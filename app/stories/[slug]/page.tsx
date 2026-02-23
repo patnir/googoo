@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { storyData } from "@/lib/storyData"
 import Image from "next/image"
 import Link from "next/link"
@@ -17,19 +16,19 @@ export default async function StoryPage({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-blue-50">
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <div className="min-h-screen bg-[#fdf8f0]">
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <header className="text-center mb-8">
           <Link
             href="/stories"
-            className="text-green-700 hover:text-green-900 text-sm font-medium transition-colors"
+            className="text-amber-600 hover:text-amber-800 text-sm font-medium transition-colors"
           >
             All Stories
           </Link>
-          <h1 className="text-3xl md:text-4xl font-bold text-green-800 mt-2 font-serif">
+          <h1 className="text-3xl md:text-4xl font-bold text-amber-900 mt-2 font-serif">
             {story.title}
           </h1>
-          <p className="text-green-700 mt-3 max-w-xl mx-auto">{story.description}</p>
+          <p className="text-amber-700 mt-3 max-w-xl mx-auto">{story.description}</p>
         </header>
 
         <main>
@@ -40,16 +39,16 @@ export default async function StoryPage({
                 href={`/stories/${slug}/${i + 1}`}
                 className="group"
               >
-                <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
                   <Image
                     src={chapter.image || "/placeholder.svg"}
                     alt={`Illustration for ${chapter.title}`}
                     width={300}
                     height={200}
-                    className="w-full h-28 sm:h-32 object-cover"
+                    className="w-full aspect-[4/3] object-cover"
                   />
                   <div className="p-3">
-                    <p className="text-xs sm:text-sm font-semibold text-green-800 group-hover:text-green-600 transition-colors leading-tight">
+                    <p className="text-xs sm:text-sm font-semibold text-amber-900 group-hover:text-amber-700 transition-colors leading-tight">
                       {chapter.title}
                     </p>
                   </div>
@@ -59,13 +58,11 @@ export default async function StoryPage({
           </div>
 
           <div className="text-center mt-8">
-            <Link href={`/stories/${slug}/1`}>
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white rounded-full px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
-              >
-                Start Reading
-              </Button>
+            <Link
+              href={`/stories/${slug}/1`}
+              className="inline-block py-3 px-8 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition-colors"
+            >
+              Start Reading
             </Link>
           </div>
         </main>

@@ -1,5 +1,18 @@
 import type { Metadata, Viewport } from 'next';
+import { Nunito, Lora } from 'next/font/google';
 import './globals.css';
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap',
+})
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -78,13 +91,13 @@ export default function RootLayout({
   if (isUnderConstruction) {
     return (
       <html lang="en">
-        <body><UnderConstruction /></body>
+        <body className={`${nunito.variable} ${lora.variable}`}><UnderConstruction /></body>
       </html>
     )
   }
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${nunito.variable} ${lora.variable}`}>{children}</body>
     </html>
   )
 }

@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { getStoryList } from "@/lib/storyData"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,64 +6,51 @@ const stories = getStoryList()
 
 export default function StoriesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
-      <div className="container mx-auto px-4 py-4">
-        {/* Header */}
-        <header className="text-center my-8">
-          <Link href="/" className="inline-block mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-purple-800 font-serif hover:text-purple-600 transition-colors">
+    <div className="min-h-screen bg-[#fdf8f0]">
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <header className="text-center mb-10">
+          <Link href="/" className="inline-block">
+            <h1 className="text-4xl md:text-5xl font-bold text-amber-900 font-serif hover:text-amber-700 transition-colors">
               Goo Goo Stories
             </h1>
           </Link>
         </header>
 
-        {/* Stories Grid */}
-        <main className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <main>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {stories.map((story) => (
-              <Card
+              <Link
                 key={story.slug}
-                className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-2 border-purple-200 rounded-3xl overflow-hidden flex flex-col"
+                href={`/stories/${story.slug}`}
+                className="group"
               >
-                <CardContent className="p-0 flex flex-col flex-grow">
-                  <div className="relative">
-                    <Image
-                      src={story.image || "/placeholder.svg"}
-                      alt={`Illustration for ${story.title}`}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
-
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-purple-900 mb-3 font-serif group-hover:text-purple-600 transition-colors">
+                <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-200">
+                  <Image
+                    src={story.image || "/placeholder.svg"}
+                    alt={`Illustration for ${story.title}`}
+                    width={400}
+                    height={300}
+                    className="w-full aspect-[4/3] object-cover"
+                  />
+                  <div className="p-5">
+                    <h2 className="text-lg font-bold text-amber-900 font-serif group-hover:text-amber-700 transition-colors mb-2">
                       {story.title}
-                    </h3>
-                    <p className="text-purple-700 text-sm leading-relaxed mb-4 flex-grow">{story.description}</p>
-
-                    <Link href={`/stories/${story.slug}`}>
-                      <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold py-2 transition-all duration-200">
-                        📖 Read Story
-                      </Button>
-                    </Link>
+                    </h2>
+                    <p className="text-amber-700 text-sm leading-relaxed">
+                      {story.description}
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Link>
             ))}
           </div>
 
-          {/* Back to Home */}
-          <div className="text-center">
-            <Link href="/">
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/70 border-2 border-purple-300 text-purple-700 hover:bg-purple-100 rounded-full px-8 py-3 font-semibold"
-              >
-                🏠 Back to Home
-              </Button>
+          <div className="text-center mt-10">
+            <Link
+              href="/"
+              className="inline-block py-3 px-6 rounded-2xl bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold transition-colors"
+            >
+              Back to Home
             </Link>
           </div>
         </main>
