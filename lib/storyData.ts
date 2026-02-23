@@ -12,6 +12,110 @@ export interface Story {
 }
 
 export const storyData: Record<string, Story> = {
+  "great-ocean-adventure": {
+    title: "Goo Goo and the Great Ocean Adventure",
+    description:
+      "Goo Goo and Carolyn set sail on a small boat to find a very special whale and discover the wonders of the ocean along the way.",
+    image: "/story-ocean.png",
+    chapters: [
+      {
+        title: "Chapter 1: The Big Blue Ocean",
+        content:
+          "Carolyn and Goo Goo stood at the edge of the ocean. The waves rolled in and out, and the water stretched as far as they could see. Goo Goo had never seen so much blue.",
+        image: "/ocean01.png",
+      },
+      {
+        title: "Chapter 2: A Boat for Two",
+        content:
+          "At the dock, they found a small wooden boat. It was just the right size. Carolyn packed snacks, and Goo Goo climbed in, ready for an adventure.",
+        image: "/ocean02.png",
+      },
+      {
+        title: "Chapter 3: Off They Go",
+        content:
+          "With a gentle push, the boat floated away from shore. The land grew smaller behind them as they sailed out into the open water.",
+        image: "/ocean03.png",
+      },
+      {
+        title: "Chapter 4: A Splash Nearby",
+        content:
+          "Suddenly—SPLASH! A dolphin jumped out of the water beside them. Goo Goo clapped her paws and laughed.",
+        image: "/ocean04.png",
+      },
+      {
+        title: "Chapter 5: Following the Dolphin",
+        content:
+          "The dolphin swam ahead, then looked back like it wanted them to follow. Carolyn steered the boat gently after it.",
+        image: "/ocean05.png",
+      },
+      {
+        title: "Chapter 6: A School of Fish",
+        content:
+          "They passed a big group of shiny fish swimming together. The fish moved like one big shape, turning all at once.",
+        image: "/ocean06.png",
+      },
+      {
+        title: "Chapter 7: The Friendly Turtle",
+        content:
+          "A sea turtle popped its head out of the water. It swam slowly beside the boat. Goo Goo waved, and the turtle blinked back at her.",
+        image: "/ocean07.png",
+      },
+      {
+        title: "Chapter 8: Dark Clouds Roll In",
+        content:
+          "The sky began to turn gray. The waves got a little bigger. Goo Goo held onto the side of the boat.",
+        image: "/ocean08.png",
+      },
+      {
+        title: "Chapter 9: Holding Steady",
+        content:
+          "Carolyn stayed calm and held the wheel. 'We can do it!' she said. Goo Goo nodded and stayed close.",
+        image: "/ocean09.png",
+      },
+      {
+        title: "Chapter 10: The Storm Passes",
+        content:
+          "After a while, the clouds moved away. The sun came back out, and the water grew calm again.",
+        image: "/ocean10.png",
+      },
+      {
+        title: "Chapter 11: A Big Shadow Below",
+        content:
+          "Something huge moved under the water. Goo Goo peeked over the side of the boat.",
+        image: "/ocean11.png",
+      },
+      {
+        title: "Chapter 12: The Gentle Whale",
+        content:
+          "A giant whale rose slowly to the surface. It sprayed water into the air. Goo Goo's eyes went wide.",
+        image: "/ocean12.png",
+      },
+      {
+        title: "Chapter 13: Riding the Waves",
+        content:
+          "The whale swam beside them, making gentle waves that lifted their boat up and down like a soft ride.",
+        image: "/ocean13.png",
+      },
+      {
+        title: "Chapter 14: A Special Song",
+        content:
+          "The whale made a low, beautiful sound. It echoed across the water. Goo Goo listened very quietly.",
+        image: "/ocean14.png",
+      },
+      {
+        title: "Chapter 15: Time to Head Back",
+        content:
+          "The sun began to set. The whale dipped back under the water. Carolyn turned the boat toward home.",
+        image: "/ocean15.png",
+      },
+      {
+        title: "Chapter 16: Back on Shore",
+        content:
+          "They stepped back onto the sand. Goo Goo looked out at the ocean again. It felt big, but not scary anymore.",
+        image: "/ocean16.png",
+      },
+    ],
+  },
   "national-park-adventure": {
     title: "Cousins in the National Parks",
     description: "Goo Goo and Carolyn embark on an exciting journey to visit her bear cousins in America's most beautiful national parks.",
@@ -179,7 +283,7 @@ export const storyData: Record<string, Story> = {
       },
     ],
   },
-  "alps-adventure": {
+  "italian-alps-adventure": {
     title: "Adventure in the Italian Alps",
     description: "Goo Goo and Carolyn visit the stunning mountains of Northern Italy, meeting mountain cows and discovering Alpine magic.",
     image: "/story6.png",
@@ -214,11 +318,12 @@ export const storyData: Record<string, Story> = {
 
 // Story display order
 const storyOrder = [
-  "alps-adventure",
+  // "great-ocean-adventure",
   "seattle-catapult-adventure",
   "national-park-adventure",
   "honey-adventure",
   "forest-friends",
+  "italian-alps-adventure",
   "summer-overalls",
 ]
 
