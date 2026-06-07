@@ -283,6 +283,44 @@ export const storyData: Record<string, Story> = {
       },
     ],
   },
+  "tokyo-adventure": {
+    title: "Goo Goo and Carolyn Go to Tokyo",
+    description:
+      "Goo Goo and Carolyn fly to Tokyo and discover cherry blossoms, busy streets, and gentle magic in a faraway city.",
+    image: "/story7.png",
+    chapters: [
+      {
+        title: "Chapter 1: A Ticket to Tokyo",
+        content:
+          "Carolyn had a wonderful surprise for Goo Goo. They were going to Tokyo! Goo Goo clapped her paws as Carolyn held up two small plane tickets by the sunny window.",
+        image: "/tokyo01.png",
+      },
+      {
+        title: "Chapter 2: Hello, Tokyo!",
+        content:
+          "The plane landed and the city sparkled below. Goo Goo peeked out at tall buildings and colorful signs. Everything felt new and bright.",
+        image: "/tokyo02.png",
+      },
+      {
+        title: "Chapter 3: Crossing the Busy Street",
+        content:
+          "The street was full of people going every direction. Carolyn held Goo Goo's paw, and together they waited for the walk signal and crossed safely.",
+        image: "/tokyo03.png",
+      },
+      {
+        title: "Chapter 4: Temple Bells and Cherry Blossoms",
+        content:
+          "They found a quiet temple garden with pink petals drifting down. Goo Goo tried a small rice snack from a friendly street vendor and thought it was delicious.",
+        image: "/tokyo04.png",
+      },
+      {
+        title: "Chapter 5: Sayonara, Tokyo",
+        content:
+          "On the train home, Goo Goo waved at the city through the window. She held a tiny souvenir and smiled. Tokyo had been wonderful.",
+        image: "/tokyo05.png",
+      },
+    ],
+  },
   "italian-alps-adventure": {
     title: "Adventure in the Italian Alps",
     description: "Goo Goo and Carolyn visit the stunning mountains of Northern Italy, meeting mountain cows and discovering Alpine magic.",
@@ -319,6 +357,7 @@ export const storyData: Record<string, Story> = {
 // Story display order
 const storyOrder = [
   // "great-ocean-adventure",
+  "tokyo-adventure",
   "seattle-catapult-adventure",
   "national-park-adventure",
   "honey-adventure",
