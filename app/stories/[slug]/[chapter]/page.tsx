@@ -1,3 +1,5 @@
+import { AudioPlayer } from "@/components/AudioPlayer"
+import { chapterAudioPath } from "@/lib/audio"
 import { storyData } from "@/lib/storyData"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
@@ -65,6 +67,10 @@ export default async function ChapterPage({
 
         {/* Story text -- warm, readable, like a book page */}
         <div className="mt-6 px-2 sm:px-4">
+          <AudioPlayer
+            src={chapterAudioPath(slug, chapterIndex + 1)}
+            label="Listen to this chapter"
+          />
           <h2 className="text-xl sm:text-2xl font-bold text-amber-900 font-serif mb-3">
             {current.title}
           </h2>
