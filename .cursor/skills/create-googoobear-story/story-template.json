@@ -1,0 +1,49 @@
+{
+  "slug": "my-new-adventure",
+  "title": "Goo Goo and Carolyn Go to …",
+  "description": "One-line summary for the story card on the homepage.",
+  "storyImage": "story9.png",
+  "styleAnchor": "../googoobear-website/public/scene2.png",
+  "references": [
+    "../googoobear-website/public/carolyn-goo-goo.png",
+    "../googoobear-website/public/carolyn.png",
+    "../googoobear-website/public/goo-goo-bear.png"
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Chapter 1: …",
+      "content": "Short narration text. One or two sentences.",
+      "scene": "Detailed illustration prompt: characters, setting, action, props, lighting, mood. Soft watercolor children's book style.",
+      "output": "myadventure01.png"
+    },
+    {
+      "number": 2,
+      "title": "Chapter 2: …",
+      "content": "…",
+      "scene": "…",
+      "output": "myadventure02.png"
+    },
+    {
+      "number": 3,
+      "title": "Chapter 3: …",
+      "content": "…",
+      "scene": "…",
+      "output": "myadventure03.png"
+    },
+    {
+      "number": 4,
+      "title": "Chapter 4: …",
+      "content": "…",
+      "scene": "…",
+      "output": "myadventure04.png"
+    },
+    {
+      "number": 5,
+      "title": "Chapter 5: …",
+      "content": "…",
+      "scene": "…",
+      "output": "myadventure05.png"
+    }
+  ]
+}
