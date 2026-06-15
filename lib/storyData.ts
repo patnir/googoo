@@ -283,6 +283,44 @@ export const storyData: Record<string, Story> = {
       },
     ],
   },
+  "mount-rainier-adventure": {
+    title: "Goo Goo and Carolyn Go to Mount Rainier",
+    description:
+      "Goo Goo and Carolyn drive their minivan to Mount Rainier National Park, camp in the snow, meet marmots and mountain goats, and reunite with bear cousins waking from hibernation.",
+    image: "/story8.png",
+    chapters: [
+      {
+        title: "Chapter 1: The Minivan Road Trip",
+        content:
+          "Carolyn packed the minivan with sleeping bags, a tent, and Goo Goo's favorite snacks. They drove toward Mount Rainier, singing as snowy peaks rose ahead through the windshield.",
+        image: "/rainier01.png",
+      },
+      {
+        title: "Chapter 2: Camp Under the Mountain",
+        content:
+          "They found a quiet campground with Mount Rainier towering above. Carolyn and Goo Goo set up their tent while soft snow still covered the ground around the pine trees.",
+        image: "/rainier02.png",
+      },
+      {
+        title: "Chapter 3: Marmots and Mountain Goats",
+        content:
+          "Near a snowy meadow, a round marmot popped up to say hello. Higher on the rocks, white mountain goats nibbled grass. Goo Goo waved and they all smiled back.",
+        image: "/rainier03.png",
+      },
+      {
+        title: "Chapter 4: Cousins Waking Up",
+        content:
+          "Goo Goo's bear cousins were waking up from their long winter sleep. They stretched and yawned outside their den. Goo Goo ran to hug them, happy they were finally awake.",
+        image: "/rainier04.png",
+      },
+      {
+        title: "Chapter 5: Snowshoe Hike",
+        content:
+          "They strapped on snowshoes and grabbed hiking poles. Together they crunched through the deep snow, laughing as Mount Rainier sparkled in the sun.",
+        image: "/rainier05.png",
+      },
+    ],
+  },
   "tokyo-adventure": {
     title: "Goo Goo and Carolyn Go to Tokyo",
     description:
@@ -357,6 +395,7 @@ export const storyData: Record<string, Story> = {
 // Story display order
 const storyOrder = [
   // "great-ocean-adventure",
+  "mount-rainier-adventure",
   "tokyo-adventure",
   "seattle-catapult-adventure",
   "national-park-adventure",
