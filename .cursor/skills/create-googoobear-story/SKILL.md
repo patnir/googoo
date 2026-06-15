@@ -34,7 +34,7 @@ Install deps once in `googoo-images`: `npm install`
 ## Workflow checklist
 
 ```
-- [ ] 1. Write story JSON in googoo-images/stories/{file-slug}.json
+- [ ] 1. Write story JSON in googoo-images/stories/{file-slug}.json (include closing lesson in last chapter)
 - [ ] 2. Register story in lib/storyData.ts (+ storyOrder)
 - [ ] 3. Generate chapter illustrations (OpenAI gpt-image-2)
 - [ ] 4. Copy images + cover to public/
@@ -75,6 +75,38 @@ Copy structure from [story-template.json](story-template.json) or existing stori
 - **content**: Simple picture-book prose. One or two sentences per beat.
 - **scene**: Be specific — characters, props, background, lighting. Include visual details the user requested (snow, animals, vehicles, etc.).
 - **No text in images** — the model prompt already forbids speech bubbles and watermarks.
+
+### Closing lesson (final chapter)
+
+Every story should end with **1–2 warm closing sentences** in the last chapter's `content` — a gentle lesson, feeling, or takeaway tied to the adventure. This is read aloud in narration, so keep it simple and heartfelt.
+
+**Pattern:** the final chapter describes the main action first, then adds the closing beat.
+
+**Example** (Mount Rainier, chapter 5):
+
+```
+They strapped on snowshoes and grabbed hiking poles. Together with Winefred and Elora,
+they crunched through the deep snow, laughing as Mount Rainier sparkled in the sun.
+After a long winter apart, it felt wonderful to be together again.
+Goo Goo promised to visit Winefred and Elora every spring.
+```
+
+**When drafting a new story**, offer the user 3–4 closing options if they haven't specified one. Themes that work well:
+
+| Theme | Example closing |
+|-------|-----------------|
+| Family / friends | *It was so nice to see family again. Goo Goo knew adventures are even better when shared with the ones you love.* |
+| Reunion | *After a long winter apart, it felt wonderful to be together again. Goo Goo promised to visit every spring.* |
+| Nature | *Goo Goo learned that mountains are beautiful in every season — and that good friends make every adventure special.* |
+| Simple warmth | *It was so nice to see Winefred and Elora again. Goo Goo smiled all the way home.* |
+
+After adding or changing the closing, regenerate audio for the last chapter:
+
+```bash
+node generate-audio.js {file-slug} --chapter 5
+```
+
+The closing does not need a new illustration — the last chapter image shows the adventure scene; the lesson is narration only.
 
 ---
 
