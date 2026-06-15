@@ -310,13 +310,13 @@ export const storyData: Record<string, Story> = {
       {
         title: "Chapter 4: Cousins Waking Up",
         content:
-          "Goo Goo's bear cousins were waking up from their long winter sleep. They stretched and yawned outside their den. Goo Goo ran to hug them, happy they were finally awake.",
+          "Goo Goo's cousins Winefred and Elora were waking up from their long winter sleep. They stretched and yawned outside their den. Goo Goo ran to hug them, happy they were finally awake.",
         image: "/rainier04.png",
       },
       {
         title: "Chapter 5: Snowshoe Hike",
         content:
-          "They strapped on snowshoes and grabbed hiking poles. Together they crunched through the deep snow, laughing as Mount Rainier sparkled in the sun.",
+          "They strapped on snowshoes and grabbed hiking poles. Together with Winefred and Elora, they crunched through the deep snow, laughing as Mount Rainier sparkled in the sun. After a long winter apart, it felt wonderful to be together again. Goo Goo promised to visit Winefred and Elora every spring.",
         image: "/rainier05.png",
       },
     ],
